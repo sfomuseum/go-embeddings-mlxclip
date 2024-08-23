@@ -36,7 +36,7 @@ func main() {
 
 This package assumes that you have already installed and configured the [mlx_clip](https://github.com/harperreed/mlx_clip) Python library and all its dependencies (including the need for the code to be run on Apple Silicon hardware).
 
-It is still the case that "installing [insert machine-learning thing here] and all its dependencies" can be a challenge so there is no attempt to automate it here. If you can run the `embeddings.py` script detailed below from the command-line then the rest of this package should work as documented.
+It is still the case that "installing [insert machine-learning thing here] and all its dependencies" can be a challenge so there is no attempt to automate it yet. If you can run the `embeddings.py` script, described below, from the command-line then the rest of this package should work as documented.
 
 ### embeddings.py
 
