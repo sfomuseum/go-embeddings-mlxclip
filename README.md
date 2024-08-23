@@ -4,6 +4,28 @@ Go package to implement the `whosonfirst/go-dedupe/embeddings.Embedder` interfac
 
 ## Usage
 
+_Error handling removed for the sake of brevity._
+
+```
+import (
+	"context"
+
+	_ "github.com/sfomuseum/go-embeddings-mlxclip"
+	"github.com/whosonfirst/go-dedupe/embeddings"
+)	
+	
+func main() {
+
+	ctx := context.Background()
+	
+	emb_uri := "mlxclip:///path/to/your/embeddings.py"     
+	emb, _ := embeddings.NewEmbedder(ctx, emb_uri)
+
+	embeddings, _ := emb.Embeddings(ctx, "Hello world")
+	// Do something with embeddings here...
+}
+```
+
 ## embeddings.py
 
 ```
