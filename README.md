@@ -1,6 +1,6 @@
 # go-embeddings-mlxclip
 
-Go package to implement the `whosonfirst/go-dedupe/embeddings.Embedder` interface using the [MLX_CLIP](https://github.com/harperreed/mlx_clip) Python and Apple's `MLX` libraries.
+Go package to implement the `whosonfirst/go-dedupe/embeddings.Embedder` interface using the [MLX_CLIP](https://github.com/harperreed/mlx_clip) Python package and Apple's `MLX` libraries.
 
 ## Usage
 
