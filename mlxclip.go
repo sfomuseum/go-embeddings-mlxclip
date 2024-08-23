@@ -7,7 +7,6 @@ import (
 	"net/url"
 	"os"
 	"os/exec"
-	"path/filepath"
 
 	wof_embeddings "github.com/whosonfirst/go-dedupe/embeddings"
 )
@@ -33,9 +32,7 @@ func NewMLXClipEmbedder(ctx context.Context, uri string) (wof_embeddings.Embedde
 		return nil, fmt.Errorf("Failed to parse URI, %w", err)
 	}
 
-	root := u.Path
-
-	embeddings_py := filepath.Join(root, "embeddings.py")
+	embeddings_py := u.Path
 
 	_, err = os.Stat(embeddings_py)
 
@@ -110,7 +107,7 @@ func (e *MLXClipEmbedder) generate_embeddings(ctx context.Context, target string
 		return nil, fmt.Errorf("Failed to create tmp file, %w", err)
 	}
 
-	// defer os.Remove(tmp.Name()) // clean up
+	defer os.Remove(tmp.Name())
 
 	err = tmp.Close()
 
@@ -155,44 +152,3 @@ func (e *MLXClipEmbedder) asFloat64(e32 []float32) []float64 {
 
 	return e64
 }
-
-// This is here mostly as a reference. Given that it requires installing
-// both Apple's MLX and Harper's Python library and CLiP there doesn't
-// seem like much point in doing this.
-// func setupMLXCLipVirtualEnvironment() error {
-// make tmpdir
-// cd in to tmpdir
-// python -m venv ./
-// bash bin/activate
-// python3 -m pip install --upgrade pip
-// python3 -m pip install --break-system-packages 'git+https://github.com/harperreed/mlx_clip.git'
-// }
-
-/*
-
-#!python3
-
-from mlx_clip import mlx_clip
-
-import sys
-import json
-
-if __name__ == "__main__":
-
-    model_dir = "/usr/local/src/mlx-examples/clip/mlx_model"
-    clip = mlx_clip(model_dir)
-
-    target = sys.argv[1]
-    input = sys.argv[2]
-    output = sys.argv[3]
-
-    with open(output, "w") as wr :
-
-        if target == "image":
-            image_embedding = clip.image_encoder(input)
-            json.dump(image_embedding, wr)
-        else :
-            text_embedding = clip.text_encoder(text)
-            json.dump(text_embedding, wr)
-
-*/
