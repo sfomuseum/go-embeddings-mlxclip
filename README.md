@@ -49,7 +49,7 @@ What follows is the "simplest and dumbest" `embeddings.py` script possible. You 
 For example:
 
 ```
-$> python3 embeddings text "hello world" /tmp/mlx-tmp-1234.json
+$> python3 ./embeddings.py text "hello world" /tmp/mlx-tmp-1234.json
 ```
 
 For example:
