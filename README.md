@@ -32,6 +32,14 @@ func main() {
 }
 ```
 
+## Build tags
+
+The `MLXClipEmbedder` package requires that you build your application with the `mlxclip` build tag. For example:
+
+```
+$> go build -tags mlxclip -o yourapp cmd/yourapp/main.go
+```
+
 ## Setup (this part is important)
 
 This package assumes that you have already installed and configured the [mlx_clip](https://github.com/harperreed/mlx_clip) Python library and all its dependencies (including the need for the code to be run on Apple Silicon hardware).
