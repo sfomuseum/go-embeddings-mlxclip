@@ -23,7 +23,7 @@ github.com/paulmach/orb/geojson
 # github.com/philippgille/chromem-go v0.6.0
 ## explicit; go 1.21
 github.com/philippgille/chromem-go
-# github.com/whosonfirst/go-dedupe v0.0.4
+# github.com/whosonfirst/go-dedupe v0.0.6
 ## explicit; go 1.22.5
 github.com/whosonfirst/go-dedupe
 github.com/whosonfirst/go-dedupe/embeddings

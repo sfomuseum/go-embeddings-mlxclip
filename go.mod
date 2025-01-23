@@ -2,7 +2,7 @@ module github.com/sfomuseum/go-embeddings-mlxclip
 
 go 1.23.0
 
-require github.com/whosonfirst/go-dedupe v0.0.4
+require github.com/whosonfirst/go-dedupe v0.0.6
 
 require (
 	github.com/aaronland/go-roster v1.0.0 // indirect
