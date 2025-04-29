@@ -10,23 +10,23 @@ import (
 	"os"
 	"os/exec"
 
-	wof_embeddings "github.com/whosonfirst/go-dedupe/embeddings"
+	"github.com/sfomuseum/go-embeddings"
 )
 
 type MLXClipEmbedder struct {
-	wof_embeddings.Embedder
+	embeddings.Embedder
 	embeddings_py string
 }
 
 func init() {
 	ctx := context.Background()
-	err := wof_embeddings.RegisterEmbedder(ctx, "mlxclip", NewMLXClipEmbedder)
+	err := embeddings.RegisterEmbedder(ctx, "mlxclip", NewMLXClipEmbedder)
 	if err != nil {
 		panic(err)
 	}
 }
 
-func NewMLXClipEmbedder(ctx context.Context, uri string) (wof_embeddings.Embedder, error) {
+func NewMLXClipEmbedder(ctx context.Context, uri string) (embeddings.Embedder, error) {
 
 	u, err := url.Parse(uri)
 

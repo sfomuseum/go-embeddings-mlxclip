@@ -1,6 +1,6 @@
 # go-embeddings-mlxclip
 
-Go package to implement the `whosonfirst/go-dedupe/embeddings.Embedder` interface using the [mlx_clip](https://github.com/harperreed/mlx_clip) Python package and Apple's `MLX` libraries.
+Go package to implement the `sfomuseum/go-embeddings.Embedder` interface using the [mlx_clip](https://github.com/harperreed/mlx_clip) Python package and Apple's `MLX` libraries.
 
 ## Documentation
 
@@ -15,7 +15,7 @@ import (
 	"context"
 
 	_ "github.com/sfomuseum/go-embeddings-mlxclip"
-	"github.com/whosonfirst/go-dedupe/embeddings"
+	"github.com/sfomuseum/go-embeddings"
 )	
 	
 func main() {
@@ -89,6 +89,6 @@ if __name__ == "__main__":
 
 ## See also
 
-* https://github.com/whosonfirst/go-dedupe
+* https://github.com/sfomuseum/go-embeddings
 * https://github.com/harperreed/mlx_clip
 * https://github.com/ml-explore/mlx
