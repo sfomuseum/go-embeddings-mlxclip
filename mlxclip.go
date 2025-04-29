@@ -1,5 +1,3 @@
-//go:build mlxclip
-
 package mlxclip
 
 import (

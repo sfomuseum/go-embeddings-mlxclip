@@ -1,4 +1,4 @@
 github.com/aaronland/go-roster v1.0.0 h1:FRDGrTqsYySKjWnAhbBGXyeGlI/o5/t9FZYCbUmyQtI=
 github.com/aaronland/go-roster v1.0.0/go.mod h1:KIsYZgrJlAsyb9LsXSCvlqvbcCBVjCSqcQiZx42i9ro=
-github.com/sfomuseum/go-embeddings v0.0.1 h1:QPo/NRqsJ/+uJxq5T6IaAvmTt2GOdRsD1UYvUJMfLrM=
-github.com/sfomuseum/go-embeddings v0.0.1/go.mod h1:MNFe/3P1AvWkYvAVKoYmjjNeN54cAFYWCjFfch1jeWA=
+github.com/sfomuseum/go-embeddings v0.0.2 h1:buTCS5yNk15k+/sumkaL2LQbDI5sb5kbWBPARZ2yogg=
+github.com/sfomuseum/go-embeddings v0.0.2/go.mod h1:MNFe/3P1AvWkYvAVKoYmjjNeN54cAFYWCjFfch1jeWA=
