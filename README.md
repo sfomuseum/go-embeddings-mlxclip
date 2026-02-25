@@ -2,6 +2,10 @@
 
 Go package to implement the `sfomuseum/go-embeddings.Embedder` interface using the [mlx_clip](https://github.com/harperreed/mlx_clip) Python package and Apple's `MLX` libraries.
 
+## Deprecation notice
+
+This package has been deprecated and is not longer maintained. Its functionality has been moved in to the [sfomuseum/go-embeddings](https://github.com/sfomuseum/go-embeddings) package.
+
 ## Documentation
 
 Documentation (in particlar `godoc`) is incomplete at this time.
